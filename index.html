@@ -7,53 +7,60 @@
     <meta name="description" content="Angular-jade : This toy angular.js module allows you to use jade templates inside html without need for build tools, thanks to angular js" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.js"></script>
+    <script type="text/javascript" src="javascripts/angular-jade-min.js"></script>
+    <script type="text/javascript" >
+    angular.module("app", ["angularJade"]) // make your app depend on angular jade
+    </script>
     <title>Angular-jade</title>
   </head>
 
-  <body>
+  <body ng-app="app">
+  <jade>
+div
+    //
+     HEADER
+    #header_wrap.outer
+      header.inner
+        a#forkme_banner(href='https://github.com/tardyp/angular-jade') View on GitHub
+        h1#project_title Angular-jade
+        h2#project_tagline
+          | This toy angular.js module allows you to use jade templates inside html without need for build tools, thanks to angular js
+        section#downloads
+          a.zip_download_link(href='https://github.com/tardyp/angular-jade/zipball/master') Download this project as a .zip file
+          a.tar_download_link(href='https://github.com/tardyp/angular-jade/tarball/master') Download this project as a tar.gz file
+    //
+       MAIN CONTENT 
+    #main_content_wrap.outer
+      section#main_content.inner
+        h1
+          a.anchor(name='angular-jade', href='#angular-jade')
+            span.octicon.octicon-link
+          | angular-jade
+        p
+          | This toy angular.js module allows you to use jade templates inside html without need for build tools, thanks to angular js
+        h1
+          a.anchor(name='do-not-use-for-anything-serious', href='#do-not-use-for-anything-serious')
+            span.octicon.octicon-link
+          | DO NOT USE FOR ANYTHING SERIOUS!
+        p
+          | use a proper build system to compile your jade templates into real html (hint: grunt-jade)
+        p This is meant for easy to understand examples, jsfiddle, etc.
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/tardyp/angular-jade">View on GitHub</a>
-
-          <h1 id="project_title">Angular-jade</h1>
-          <h2 id="project_tagline">This toy angular.js module allows you to use jade templates inside html without need for build tools, thanks to angular js</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/tardyp/angular-jade/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/tardyp/angular-jade/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="angular-jade" class="anchor" href="#angular-jade"><span class="octicon octicon-link"></span></a>angular-jade</h1>
-
-<p>This toy angular.js module allows you to use jade templates inside html without need for build tools, thanks to angular js</p>
-
-<h1>
-<a name="do-not-use-for-anything-serious" class="anchor" href="#do-not-use-for-anything-serious"><span class="octicon octicon-link"></span></a>DO NOT USE FOR ANYTHING SERIOUS!</h1>
-
-<p>use a proper build system to compile your jade templates into real html (hint: grunt-jade)</p>
-
-<p>This is meant for easy to understand examples, jsfiddle, etc.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Angular-jade maintained by <a href="https://github.com/tardyp">tardyp</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
+        p See the 
+          a(href="view-source:http://tardyp.github.io/angular-jade") source
+          | &nbsp;of this page to see how it works
+    //
+       FOOTER  
+    #footer_wrap.outer
+      footer.inner
+        p.copyright
+          | Angular-jade maintained by
+          a(href='https://github.com/tardyp') tardyp
+        p
+          | Published with
+          a(href='http://pages.github.com') GitHub Pages
+</jade>
 
   </body>
 </html>
