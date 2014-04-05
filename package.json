@@ -1,0 +1,10 @@
+{ "name" : "angular-jade"
+, "version" : "1.0.0"
+, "description" : "a toy to use jade inside simple html documents"
+, "main" : "jade.js"
+, "devDependencies": {
+   "jade": "~1.3.1",
+   "browserify": "~3.38.0",
+   "uglifyjs": "~2.3.5"
+}
+}
